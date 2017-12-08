@@ -82,7 +82,7 @@ let fold_wtf_8 ?(pos = 0) ?len f acc s =
 
 (* Add a UTF-16 code unit to a buffer, encoded in WTF-8. *)
 let add_wtf_8 buf code =
-  let w byte = Buffer.add_char buf (Char.unsafe_chr byte) [@@inline] in
+  let[@inline] w byte = Buffer.add_char buf (Char.unsafe_chr byte) in
   if code >= 0x10000 then begin
   (* 4 bytes *)
     w (0xf0 lor (code lsr 18));
