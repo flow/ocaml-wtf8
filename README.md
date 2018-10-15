@@ -15,3 +15,7 @@ If we try to encode these ill-formed code units into UTF-8, we similarly
 get ill-formed UTF-8. WTF-8 is a fun name for that encoding.
 
 https://simonsapin.github.io/wtf-8/
+
+## License
+
+ocaml-wtf8 is MIT licensed, as found in the LICENSE file.
